@@ -12,6 +12,8 @@ import { UserComponent } from './components/user.component';
 import { UserFilterPipe } from './Filter/user.pipe';
 import { SearchComponent } from './Shared/search.component';
 import AppErrorHandler from './Shared/errorhandler';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule, MdNativeDateModule } from '@angular/material';
 
  
 @NgModule({
