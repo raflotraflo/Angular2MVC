@@ -1,4 +1,4 @@
-﻿import { NgModule } from '@angular/core';
+﻿import { NgModule, ErrorHandler } from '@angular/core';
 import { APP_BASE_HREF } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -11,12 +11,13 @@ import { UserService } from './Service/user.service';
 import { UserComponent } from './components/user.component';
 import { UserFilterPipe } from './Filter/user.pipe';
 import { SearchComponent } from './Shared/search.component';
+import AppErrorHandler from './Shared/errorhandler';
 
  
 @NgModule({
     imports: [BrowserModule, ReactiveFormsModule, HttpModule, routing, Ng2Bs3ModalModule, FormsModule],
     declarations: [AppComponent, UserComponent, HomeComponent, UserFilterPipe, SearchComponent],
-    providers: [{ provide: APP_BASE_HREF, useValue: '/' }, UserService],
+    providers: [{ provide: ErrorHandler, useClass: AppErrorHandler },{ provide: APP_BASE_HREF, useValue: '/' }, UserService],
     bootstrap: [AppComponent]
 })
 

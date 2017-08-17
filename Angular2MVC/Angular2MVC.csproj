@@ -285,6 +285,7 @@
     <TypeScriptCompile Include="app\Models\user.ts" />
     <TypeScriptCompile Include="app\Service\user.service.ts" />
     <TypeScriptCompile Include="app\Shared\enum.ts" />
+    <TypeScriptCompile Include="app\Shared\errorhandler.ts" />
     <TypeScriptCompile Include="app\Shared\global.ts" />
     <TypeScriptCompile Include="app\Shared\search.component.ts" />
   </ItemGroup>

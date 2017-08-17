@@ -14,6 +14,7 @@ namespace Angular2MVC.Controllers
         public HttpResponseMessage Get()
         {
             return ToJson(UserDB.TblUser.AsEnumerable());
+            // return ErrorJson(UserDB.TblUser.AsEnumerable());
         }
 
         public HttpResponseMessage Post([FromBody]TblUser value)
