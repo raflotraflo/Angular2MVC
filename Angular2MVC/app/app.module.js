@@ -17,6 +17,8 @@ var app_routing_1 = require("./app.routing");
 var home_component_1 = require("./components/home.component");
 var user_service_1 = require("./Service/user.service");
 var user_component_1 = require("./components/user.component");
+var user_pipe_1 = require("./Filter/user.pipe");
+var search_component_1 = require("./Shared/search.component");
 var AppModule = (function () {
     function AppModule() {
     }
@@ -24,8 +26,8 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, ng2_bs3_modal_1.Ng2Bs3ModalModule],
-        declarations: [app_component_1.AppComponent, user_component_1.UserComponent, home_component_1.HomeComponent],
+        imports: [platform_browser_1.BrowserModule, forms_1.ReactiveFormsModule, http_1.HttpModule, app_routing_1.routing, ng2_bs3_modal_1.Ng2Bs3ModalModule, forms_1.FormsModule],
+        declarations: [app_component_1.AppComponent, user_component_1.UserComponent, home_component_1.HomeComponent, user_pipe_1.UserFilterPipe, search_component_1.SearchComponent],
         providers: [{ provide: common_1.APP_BASE_HREF, useValue: '/' }, user_service_1.UserService],
         bootstrap: [app_component_1.AppComponent]
     })

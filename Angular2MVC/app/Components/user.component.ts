@@ -24,6 +24,8 @@ export class UserComponent implements OnInit {
     dbops: DBOperation;
     modalTitle: string;
     modalBtnTitle: string;
+    listFilter: string;
+    searchTitle: string = "Search: ";
 
     constructor(private fb: FormBuilder, private _userService: UserService) { }
 
@@ -142,5 +144,10 @@ export class UserComponent implements OnInit {
                 break;
 
         }
+    }
+
+    criteriaChange(value: string): void {
+        if (value != '[object Event]')
+            this.listFilter = value;
     }
 }

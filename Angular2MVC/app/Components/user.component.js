@@ -20,6 +20,7 @@ var UserComponent = (function () {
         this.fb = fb;
         this._userService = _userService;
         this.indLoading = false;
+        this.searchTitle = "Search: ";
     }
     UserComponent.prototype.ngOnInit = function () {
         this.userFrm = this.fb.group({
@@ -112,6 +113,10 @@ var UserComponent = (function () {
                 });
                 break;
         }
+    };
+    UserComponent.prototype.criteriaChange = function (value) {
+        if (value != '[object Event]')
+            this.listFilter = value;
     };
     return UserComponent;
 }());
